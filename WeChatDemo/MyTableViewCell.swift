@@ -16,6 +16,8 @@ class MyTableViewCell: UITableViewCell {
     var name = UILabel()
     var contentText = UILabel()
     var photos = UIImageView()
+    
+    
     var photoTest = [
         UIImageView(),
         UIImageView(),
@@ -81,12 +83,12 @@ class MyTableViewCell: UITableViewCell {
         
     }
     
-    public func setContent(names: String, avatars: String, content: String, photosAmount: Int, photosName: String){
+    public func setContent(names: String, avatars: String, content: String, photosAmount: Int, photosName: [Photos]){
         name.text = names
         avatar.image = UIImage(named: avatars)
         contentText.text = content
         amount = photosAmount
-        photos.image = UIImage(named: photosName)
+//        photos.image = UIImage(named: photosName)
         
         print(UIImage(named: "apple silicon")?.size.width)
         print(UIImage(named: "apple silicon")?.size.height)

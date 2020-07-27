@@ -58,7 +58,7 @@ extension ViewController: UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.identifier, for: indexPath) as? MyTableViewCell else{
             return UITableViewCell()
         }
-        cell.setContent(names: group[indexPath.section].name, avatars: group[indexPath.section].avatar, content: group[indexPath.section].opinion, photosAmount: group[indexPath.section].photo.count, photosName: group[indexPath.section].photo[indexPath.row].photoName)
+        cell.setContent(names: group[indexPath.section].name, avatars: group[indexPath.section].avatar, content: group[indexPath.section].opinion, photosAmount: group[indexPath.section].photo.count, photosName: group[indexPath.section].photo[Photos])
         return cell
         
     }
