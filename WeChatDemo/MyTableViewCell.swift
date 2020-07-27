@@ -16,6 +16,18 @@ class MyTableViewCell: UITableViewCell {
     var name = UILabel()
     var contentText = UILabel()
     var photos = UIImageView()
+    var photoTest = [
+        UIImageView(),
+        UIImageView(),
+        UIImageView(),
+        UIImageView(),
+        UIImageView(),
+        UIImageView(),
+        UIImageView(),
+        UIImageView(),
+        UIImageView()
+    ]
+    
     var amount:Int = 0
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -75,6 +87,7 @@ class MyTableViewCell: UITableViewCell {
         contentText.text = content
         amount = photosAmount
         photos.image = UIImage(named: photosName)
+        
         print(UIImage(named: "apple silicon")?.size.width)
         print(UIImage(named: "apple silicon")?.size.height)
         
