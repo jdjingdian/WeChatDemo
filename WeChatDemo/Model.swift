@@ -7,14 +7,13 @@
 //
 
 import Foundation
-
-struct Photos {
-    var photoName: String
-}
-
 struct Person {
     var name: String
     var avatar: String
     var opinion: String
-    var photo: [Photos]
+    var photos = [String]()
+}
+struct Type{
+    var typ: String
+    var person:[Person]
 }
