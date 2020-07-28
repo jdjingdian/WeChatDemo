@@ -18,7 +18,7 @@ class ViewController: UIViewController {
             Person(name: "Mac Catalyst", avatar: "catalyst", opinion: "Native Mac apps built with Mac Catalyst can share code with your iPad apps, and you can add more features just for Mac. In macOS Big Sur, you can create even more powerful versions of your apps and take advantage of every pixel on the screen by running them at native Mac resolution. Apps built with Mac Catalyst can now be fully controlled using just the keyboard, access more iOS frameworks, and take advantage of the all-new look of macOS Big Sur. There’s never been a better time to turn your iPad app into a powerful Mac app.", photos: []),
             Person(name: "Universal App Quick Start Program", avatar: "dtk", opinion: "", photos: ["big sur"]),
             Person(name: "Universal App Quick Start Program", avatar: "dtk", opinion: "", photos: ["dtk"]),
-            Person(name: "Universal App Quick Start Program", avatar: "dtk", opinion: "Hello world!", photos: [])
+            Person(name: "Universal App Quick Start Program", avatar: "dtk", opinion: "hello", photos: ["dtk", "big sur", "dtk", "big sur"])
             
             
             
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         let myTable = UITableView()
         myTable.delegate = self
         myTable.dataSource = self
-        myTable.estimatedRowHeight = 600
+        myTable.estimatedRowHeight = 1000
         myTable.rowHeight = UITableView.automaticDimension
         myTable.register(FirstTableViewCell.self, forCellReuseIdentifier: FirstTableViewCell.identifier1)
         myTable.register(MyTableViewCell.self, forCellReuseIdentifier: MyTableViewCell.identifier)
@@ -68,7 +68,7 @@ extension ViewController: UITableViewDataSource{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.identifier, for: indexPath) as? MyTableViewCell else{
                 return UITableViewCell()
             }
-            cell.setContent(rows: indexPath.section , names: group[indexPath.section].person[indexPath.row].name , avatars: group[indexPath.section].person[indexPath.row].avatar, content: group[indexPath.section].person[indexPath.row].opinion, photosAmount: group[indexPath.section].person[indexPath.row].photos.count, photosName: group[indexPath.section].person[indexPath.row].photos)
+            cell.setContent(names: group[indexPath.section].person[indexPath.row].name , avatars: group[indexPath.section].person[indexPath.row].avatar, content: group[indexPath.section].person[indexPath.row].opinion, photosAmount: group[indexPath.section].person[indexPath.row].photos.count, photosName: group[indexPath.section].person[indexPath.row].photos)
             
             return cell
         }

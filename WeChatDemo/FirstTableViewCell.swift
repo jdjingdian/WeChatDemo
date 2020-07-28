@@ -8,14 +8,15 @@
 
 import UIKit
 import SnapKit
+import CoreImage
 
 class FirstTableViewCell: UITableViewCell {
     static let identifier1 = "FirstTableViewCell"
     var photos = UIImageView()
     var avatar = UIImageView()
     var name = UILabel()
-    let icon = UIImage(systemName: "chevron.backward")
     var icon1 = UIImageView()
+    var icon2 = UIImageView()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super .init(style:style,reuseIdentifier:reuseIdentifier)
         setUI()
@@ -30,12 +31,14 @@ class FirstTableViewCell: UITableViewCell {
         contentView.addSubview(avatar)
         contentView.addSubview(name)
         contentView.addSubview(icon1)
+        contentView.addSubview(icon2)
         photos.image = UIImage(named: "background")
         photos.clipsToBounds = true
         let heightOf:CGFloat = (photos.image?.size.height)!
         let widthOf:CGFloat = (photos.image?.size.width)!
         photos.contentMode = .scaleAspectFill
         photos.snp.makeConstraints{(make) in
+    
             make.leading.top.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
             make.width.equalTo(UIScreen.main.bounds.width)
@@ -50,13 +53,30 @@ class FirstTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview().inset(45)
             make.trailing.equalToSuperview().inset(30)
         }
-        icon1.image = icon
+        icon1.image = UIImage(systemName: "chevron.left.circle")
+        icon1.tintColor = .black
         icon1.snp.makeConstraints{(make) in
             make.width.height.equalTo(30)
-            make.leading.top.equalToSuperview().inset(20)
-//            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview().inset(20)
+            make.top.equalToSuperview().inset(40)
         }
-        
+        icon2.image = UIImage(systemName: "camera")
+        icon2.tintColor = .black
+        icon2.snp.makeConstraints{(make) in
+            make.width.equalTo(36)
+            make.height.equalTo(27)
+            make.trailing.equalToSuperview().inset(25)
+            make.centerY.equalTo(icon1.snp.centerY).offset(1)
+        }
+        name.text = "Derek Jing"
+        name.font = UIFont.boldSystemFont(ofSize: 20)
+        name.textAlignment = .right
+        name.textColor = UIColor.black
+        name.snp.makeConstraints{(make) in
+            make.width.equalToSuperview()
+            make.trailing.equalTo(avatar.snp.leading).offset(-10)
+            make.centerY.equalTo(avatar.snp.centerY)
+        }
     }
     
 }
