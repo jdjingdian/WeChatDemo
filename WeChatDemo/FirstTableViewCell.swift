@@ -36,14 +36,11 @@ class FirstTableViewCell: UITableViewCell {
         photos.clipsToBounds = true
         let heightOf:CGFloat = (photos.image?.size.height)!
         let widthOf:CGFloat = (photos.image?.size.width)!
-        photos.contentMode = .scaleAspectFill
+        photos.contentMode = .scaleAspectFit
         photos.snp.makeConstraints{(make) in
-    
-            make.leading.top.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.edges.equalToSuperview()
             make.width.equalTo(UIScreen.main.bounds.width)
             make.height.equalTo(photos.snp.width).multipliedBy(heightOf/widthOf)
-            
         }
         avatar.image = UIImage(named: "selfLogo")
         avatar.clipsToBounds = true
