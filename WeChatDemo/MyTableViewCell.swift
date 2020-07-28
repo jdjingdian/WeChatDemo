@@ -71,12 +71,12 @@ class MyTableViewCell: UITableViewCell {
             make.leading.equalTo(avatar.snp.trailing).offset(8)
             make.trailing.equalToSuperview().inset(16)
         }
-        imageContenView.snp.makeConstraints{(make) in
-            make.top.equalTo(contentText.snp.bottom).offset(10)
-            make.leading.equalTo(contentText.snp.leading)
-            make.trailing.equalToSuperview().inset(10)
-            make.bottom.equalToSuperview().inset(10)
-        }
+        //        imageContenView.snp.makeConstraints{(make) in
+        //            make.top.equalTo(contentText.snp.bottom).offset(10)
+        //            make.leading.equalTo(contentText.snp.leading)
+        //            make.trailing.equalToSuperview().inset(10)
+        //            make.bottom.equalToSuperview().inset(10)
+        //        }
     }
     public func setContent(names: String, avatars: String, content: String, photosAmount: Int, photosName: [String]){
         name.text = names
@@ -91,22 +91,26 @@ class MyTableViewCell: UITableViewCell {
         if(count == 0){
             imageContenView.snp.makeConstraints{(make) in
                 make.size.equalTo(0)
-                
+            }
+            contentText.snp.makeConstraints{(make) in
+                make.bottom.equalToSuperview().inset(16)
             }
         }else{
             imageContenView.snp.makeConstraints{(make) in
-                make.size.equalTo(400)
-                imageContenView.addSubview(photo[0])
-                photo[0].clipsToBounds = true
-                photo[0].contentMode = .scaleAspectFill
-                photo[0].image = UIImage(named: pName[0])
-                photo[0].snp.makeConstraints{(make) in
-                    make.size.equalToSuperview()
-                    make.edges.equalToSuperview()
-                }
+                make.top.equalTo(contentText.snp.bottom).offset(10)
+                make.leading.equalTo(contentText.snp.leading)
+                make.trailing.equalToSuperview().inset(10)
+                make.bottom.equalToSuperview().inset(10)}
+            imageContenView.addSubview(photo[0])
+            photo[0].clipsToBounds = true
+            photo[0].contentMode = .scaleAspectFill
+            photo[0].image = UIImage(named: pName[0])
+            photo[0].snp.makeConstraints{(make) in
+                make.size.equalToSuperview()
+                make.edges.equalToSuperview()
             }
         }
-        
     }
+    
 }
 
