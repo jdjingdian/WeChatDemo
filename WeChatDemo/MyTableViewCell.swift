@@ -41,9 +41,11 @@ class MyTableViewCell: UITableViewCell {
         photo.snp.remakeConstraints{(make) in
 
         }
-        imageContenView.snp.remakeConstraints{(make) in
+        imageContenView.snp.remakeConstraints{ _ in
 
         }
+        
+        
     }
     
     
@@ -103,7 +105,8 @@ class MyTableViewCell: UITableViewCell {
                 make.trailing.equalToSuperview().inset(16)
                 
             }
-            setImage(count:amount, pName:photosName)
+//            setImage(count:amount, pName:photosName)
+            setImage(amount, pName: photosName)
         }else{
             contentText.snp.makeConstraints{(make) in
                 make.top.equalTo(name.snp.bottom).offset(5)
@@ -114,8 +117,9 @@ class MyTableViewCell: UITableViewCell {
             
         }
     }
+
     
-    private func setImage(count: Int, pName:[String]){
+    private func setImage(_ count: Int, pName:[String]){
         imageContenView.addSubview(photo)
         photo.clipsToBounds = true
         photo.contentMode = .scaleAspectFill
