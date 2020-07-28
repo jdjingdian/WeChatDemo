@@ -14,6 +14,8 @@ class MyTableViewCell: UITableViewCell {
     static let identifier = "MyTableViewCell"
     var avatar = UIImageView()
     var name = UILabel()
+    var imageContenView = UIView()
+    
     var contentText = UILabel()
     //    var photos = UIImageView()
     
@@ -42,6 +44,7 @@ class MyTableViewCell: UITableViewCell {
     }
     
     private func setUpUI(){
+        contentView.addSubview(imageContenView)
         contentView.addSubview(avatar)
         contentView.addSubview(contentText)
         //        contentView.addSubview(photos)
@@ -118,7 +121,6 @@ class MyTableViewCell: UITableViewCell {
                         make.top.equalTo(contentText.snp.bottom).offset(5)
                         make.leading.equalTo(contentText.snp.leading)
                         make.width.height.equalTo((value - 120)/3)
-                        //                        make.bottom.equalToSuperview().inset(10)
                     }
                 case 1:
                     photo[i].snp.makeConstraints{(make) in
@@ -143,33 +145,41 @@ class MyTableViewCell: UITableViewCell {
                         make.bottom.equalToSuperview().inset(10)
                     }
                 default:
-                    photo[i].snp.makeConstraints{(make) in
-                        make.top.equalTo(contentText.snp.bottom).offset(5)
-                        make.leading.equalTo(contentText.snp.leading)
-                        make.width.height.equalTo(100)
-                        make.bottom.equalToSuperview().inset(10)
-                    }
-                    
-                    
-                }
-            }
-            
-        default :
-            for i in 0..<amount{
-                contentView.addSubview(photo[i])
-                photo[i].image = UIImage(named: photosName[i])
-                photo[i].clipsToBounds = true
-                photo[i].contentMode = .scaleAspectFill
-            }
-            photo[0].clipsToBounds = true
-            photo[0].contentMode = .scaleAspectFit
-            photo[0].snp.makeConstraints{(make) in
-                make.top.equalTo(contentText.snp.bottom).offset(5)
-                make.leading.equalTo(contentText.snp.leading)
-                make.width.height.equalTo(100)
-                make.bottom.equalToSuperview().inset(10)
+                    photo[i].clipsToBounds = false
+                
                 
             }
         }
+        
+        default :
+            for i in 0..<amount{
+            contentView.addSubview(photo[i])
+            photo[i].image = UIImage(named: photosName[i])
+            photo[i].clipsToBounds = true
+            photo[i].contentMode = .scaleAspectFill
+            photo[i].snp.makeConstraints{(make) in
+                if(i == 0){
+                    make.top.equalTo(contentText.snp.bottom).offset(5)
+                    make.leading.equalTo(contentText.snp.leading)
+                    make.width.height.equalTo((value - 120)/3)
+                }else if(i == 3){
+                    make.top.equalTo(photo[i-3].snp.bottom).offset(5)
+                    make.leading.equalTo(contentText.snp.leading)
+                    make.width.height.equalTo((value - 120)/3)
+                    
+                }else if(i == 6){
+                    make.top.equalTo(photo[i-3].snp.bottom).offset(5)
+                    make.leading.equalTo(contentText.snp.leading)
+                    make.width.height.equalTo((value - 120)/3)
+                    make.bottom.equalToSuperview().inset(16)
+                }else{
+                    make.leading.equalTo(photo[i-1].snp.trailing).offset(5).priority(999)
+                    make.width.height.equalTo((value - 120)/3)
+                    make.centerY.equalTo(photo[i-1].snp.centerY)
+                    make.bottom.equalTo(photo[i-1].snp.bottom)
+                }
+            }
+        }
     }
+}
 }
