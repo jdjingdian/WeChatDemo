@@ -73,14 +73,11 @@ class MyTableViewCell: UITableViewCell {
         }
         imageContenView.snp.makeConstraints{(make) in
             make.top.equalTo(contentText.snp.bottom).offset(10)
-            make.bottom.equalToSuperview()
-            make.width.height.equalTo(400)
+            make.leading.equalTo(contentText.snp.leading)
+            make.trailing.equalToSuperview().inset(10)
+            make.bottom.equalToSuperview().inset(10)
         }
     }
-    private func setUpCell(){
-        
-    }
-    
     public func setContent(names: String, avatars: String, content: String, photosAmount: Int, photosName: [String]){
         name.text = names
         avatar.image = UIImage(named: avatars)
@@ -90,6 +87,25 @@ class MyTableViewCell: UITableViewCell {
     }
     
     private func setImage(count: Int, pName:[String]){
+        print(count)
+        if(count == 0){
+            imageContenView.snp.makeConstraints{(make) in
+                make.size.equalTo(0)
+                
+            }
+        }else{
+            imageContenView.snp.makeConstraints{(make) in
+                make.size.equalTo(400)
+                imageContenView.addSubview(photo[0])
+                photo[0].clipsToBounds = true
+                photo[0].contentMode = .scaleAspectFill
+                photo[0].image = UIImage(named: pName[0])
+                photo[0].snp.makeConstraints{(make) in
+                    make.size.equalToSuperview()
+                    make.edges.equalToSuperview()
+                }
+            }
+        }
         
     }
 }
