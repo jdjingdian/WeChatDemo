@@ -65,6 +65,7 @@
 		E422ABE024CA819A002E10EB /* WeChatDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeChatDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E422ABE424CA819A002E10EB /* WeChatDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatDemoUITests.swift; sourceTree = "<group>"; };
 		E422ABE624CA819A002E10EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49C684B24D01B1800C6DCD6 /* WeChatDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeChatDemo.entitlements; sourceTree = "<group>"; };
 		E4C89E1124CE681B008DD101 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E4C89E2C24CE90B9008DD101 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +146,7 @@
 		E422ABC124CA8199002E10EB /* WeChatDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E49C684B24D01B1800C6DCD6 /* WeChatDemo.entitlements */,
 				E422ABC224CA8199002E10EB /* AppDelegate.swift */,
 				E422ABC424CA8199002E10EB /* SceneDelegate.swift */,
 				E422ABC624CA8199002E10EB /* ViewController.swift */,
@@ -595,15 +597,18 @@
 			baseConfigurationReference = 267E0A0B67C9AA61282AEBF3 /* Pods-WeChatDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WeChatDemo/WeChatDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BR63YT2EJJ;
 				INFOPLIST_FILE = WeChatDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicdian.WeChatDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -614,15 +619,18 @@
 			baseConfigurationReference = 4A0BB66DBF4F064165ACEF4F /* Pods-WeChatDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WeChatDemo/WeChatDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BR63YT2EJJ;
 				INFOPLIST_FILE = WeChatDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicdian.WeChatDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
