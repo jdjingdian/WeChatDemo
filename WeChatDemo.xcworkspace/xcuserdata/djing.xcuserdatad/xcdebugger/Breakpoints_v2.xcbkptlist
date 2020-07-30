@@ -14,8 +14,8 @@
             filePath = "WeChatDemo/MyTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "setContent(names:avatars:content:photosAmount:photosName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D37EB094-C9C4-4A37-81E8-16D1FBCAC542"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeChatDemo/MyTableViewCell.swift"
@@ -34,6 +34,70 @@
             endingLineNumber = "172"
             landmarkName = "setImage(count:pName:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA84CE9B-409E-40D5-BC8D-51D1729880B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeChatDemo/MyTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "setImage(count:pName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6531D291-4573-4BB2-90C7-15EBE7E602A4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeChatDemo/MyTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "setImage(count:pName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6531D291-4573-4BB2-90C7-15EBE7E602A4 - 1b185b6e90da2e08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeChatDemo.MyTableViewCell.(setImage in _C995BE990EB9E0788C765686AC40A914)(count: Swift.Int, pName: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "WeChatDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemo/MyTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "5196">
+               </Location>
+               <Location
+                  uuid = "6531D291-4573-4BB2-90C7-15EBE7E602A4 - b10d0f9195554a6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #7 (SnapKit.ConstraintMaker) -&gt; () in WeChatDemo.MyTableViewCell.(setImage in _C995BE990EB9E0788C765686AC40A914)(count: Swift.Int, pName: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "WeChatDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemo/MyTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

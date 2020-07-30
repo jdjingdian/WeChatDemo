@@ -37,8 +37,9 @@ class MyTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         imageContenView.snp.remakeConstraints{(make) in
-            
         }
+
+
         for i in 0...8{
             photo[i].snp.remakeConstraints { (make) in
             }
@@ -73,7 +74,7 @@ class MyTableViewCell: UITableViewCell {
         name.textColor = UIColor(red: 90/255, green: 106/255, blue: 145/255,alpha: 1)
         name.textAlignment = .left
         name.font = UIFont.boldSystemFont(ofSize: 20)
-        name.snp.makeConstraints{(make) in
+        name.snp.remakeConstraints{(make) in
             make.leading.equalTo(avatar.snp.trailing).offset(8).priority(999)
             make.top.equalTo(avatar.snp.top)
             make.trailing.equalToSuperview().inset(10)
@@ -91,7 +92,7 @@ class MyTableViewCell: UITableViewCell {
         amount = photosAmount
         
         if(amount != 0 ){
-            contentText.snp.makeConstraints{(make) in
+            contentText.snp.remakeConstraints{(make) in
                 make.top.equalTo(name.snp.bottom).offset(5)
                 make.leading.equalTo(avatar.snp.trailing).offset(8)
                 make.trailing.equalToSuperview().inset(16)
@@ -99,7 +100,7 @@ class MyTableViewCell: UITableViewCell {
             }
             setImage(count:amount, pName:photosName)
         }else{
-            contentText.snp.makeConstraints{(make) in
+            contentText.snp.remakeConstraints{(make) in
                 make.top.equalTo(name.snp.bottom).offset(5)
                 make.leading.equalTo(avatar.snp.trailing).offset(8)
                 make.trailing.equalToSuperview().inset(16)
@@ -110,7 +111,6 @@ class MyTableViewCell: UITableViewCell {
     }
     
     private func setImage(count: Int, pName:[String]){
-        print(count)
         //将图像循环放入imageContenView(UIView)中
         for i in 0 ..< count {
             imageContenView.addSubview(photo[i])
@@ -170,40 +170,40 @@ class MyTableViewCell: UITableViewCell {
                     photo[i].clipsToBounds = false
                 }
             }else{
-                imageContenView.addSubview(photo[i])
+                photo[i].image = UIImage(named: pName[i])
                 photo[i].clipsToBounds = true
                 photo[i].contentMode = .scaleAspectFill
                 photo[i].snp.makeConstraints{(make) in
                     make.width.height.equalTo(length)
-                    if(i == 0 || i == 1 || i == 2){
-                        make.top.equalToSuperview()
+                    if(i>=((count-1)/3)*3){
+                        make.bottom.equalToSuperview()
                     }
-                    if(i%3 == 0){
+                    if(i == 0){
+                        make.top.equalToSuperview()
                         make.leading.equalToSuperview()
-                        if(i>2){
-                            make.top.equalTo(photo[i-3].snp.bottom).offset(5)
-                        }
-                    }else if(i%3 == 1){
+                    }else if(i>0&&i<3){
+                        make.top.equalToSuperview()
                         make.leading.equalTo(photo[i-1].snp.trailing).offset(5)
-                        if(i>2){
-                            make.top.equalTo(photo[i-3].snp.bottom).offset(5)
-                        }
-                    }else if(i%3 == 2){
+                    }else if(i%3 == 0 && i>2){
+                        make.leading.equalToSuperview()
+                        make.top.equalTo(photo[i-3].snp.bottom).offset(5)
+                    }else if(i%3 == 1 && i>2){
+                        make.leading.equalTo(photo[i-1].snp.trailing).offset(5)
+                        make.top.equalTo(photo[i-3].snp.bottom).offset(5)
+                    }else if(i%3 == 2 && i>2){
                         make.trailing.equalToSuperview()
                         make.leading.equalTo(photo[i-1].snp.trailing).offset(5)
-                        if(i>2){
-                            make.top.equalTo(photo[i-3].snp.bottom).offset(5)
-                        }
+                        make.top.equalTo(photo[i-3].snp.bottom).offset(5)
                     }
-                    
+                   
                 }
             }
-            imageContenView.snp.makeConstraints{(make) in
+            imageContenView.snp.remakeConstraints{(make) in
                 
-                make.height.equalTo(setLayoutHeight(nums: count - 1))
-                make.width.equalTo(setLayoutWidth(nums: count - 1))
-                make.leading.equalTo(contentText.snp.leading)
-                make.top.equalTo(contentText.snp.bottom).offset(10)
+                make.height.equalTo(setLayoutHeight(nums: count))
+                make.width.equalTo(setLayoutWidth(nums: count))
+                make.leading.equalTo(contentText.snp.leading).priority(888)
+                make.top.equalTo(contentText.snp.bottom).offset(10).priority(999)
                 make.bottom.equalToSuperview().inset(16)
             }
             
@@ -214,13 +214,15 @@ class MyTableViewCell: UITableViewCell {
     private func setLayoutHeight(nums: Int) -> CGFloat {
         var heightOf:CGFloat = 0.0
         if(nums == 0){
-            heightOf = UIScreen.main.bounds.width * ((photo[nums].image?.size.height)!)/((photo[nums].image?.size.width)!) / 2
-        }else if(nums == 3){
-            heightOf = 2*length2 + 5
+            heightOf = 0
         }else if(nums == 1){
+            heightOf = UIScreen.main.bounds.width * ((photo[nums-1].image?.size.height)!)/((photo[nums-1].image?.size.width)!) / 2
+        }else if(nums == 4){
+            heightOf = 2*length2 + 5
+        }else if(nums == 2){
             heightOf = length2
         }else{
-            let i:CGFloat = CGFloat((nums+1)/3)
+            let i:CGFloat = CGFloat((nums-1)/3)
             heightOf = (i+1)*length + i*5
         }
         return heightOf
@@ -229,9 +231,18 @@ class MyTableViewCell: UITableViewCell {
     private func setLayoutWidth(nums: Int) -> CGFloat {
         var widthOf:CGFloat = 0.0
         if(nums == 0){
+            widthOf = 0
+        }else if(nums == 1){
             widthOf = UIScreen.main.bounds.width/2
-        }else if(nums == 3 || nums == 1){
+        }
+        else if(nums == 4 || nums == 2){
             widthOf = 2*length2 + 5
+        }else if(nums<=3){
+            let i:CGFloat = CGFloat(nums)
+            widthOf = i*length + (i-1)*5
+        }
+        else{
+            widthOf = 3*length + 2*5
         }
         return widthOf
     }
