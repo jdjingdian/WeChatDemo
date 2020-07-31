@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             Person(name: "123", avatar: "dtk", opinion: "6 Images", photos: ["dtk", "selfLogo", "big sur", "apple silicon","1","2"]),
             Person(name: "123", avatar: "dtk", opinion: "7 Images", photos: ["dtk", "selfLogo", "big sur", "apple silicon","1","2","3"]),
             Person(name: "Mac Catalyst", avatar: "dtk", opinion: "8 Images", photos: ["dtk", "big sur", "selfLogo", "big sur","dtk", "selfLogo", "big sur", "apple silicon"]),
-            Person(name: "Self", avatar: "selflogo", opinion: "9 Images", photos: ["dtk", "big sur", "4", "big sur","dtk", "selfLogo", "big sur", "apple silicon","background"])
+            Person(name: "Self", avatar: "selfLogo", opinion: "9 Images", photos: ["dtk", "big sur", "4", "big sur","dtk", "selfLogo", "big sur", "apple silicon","background"])
             
             
             

@@ -19,6 +19,7 @@
 		E422ABCF24CA819A002E10EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E422ABCD24CA819A002E10EB /* LaunchScreen.storyboard */; };
 		E422ABDA24CA819A002E10EB /* WeChatDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E422ABD924CA819A002E10EB /* WeChatDemoTests.swift */; };
 		E422ABE524CA819A002E10EB /* WeChatDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E422ABE424CA819A002E10EB /* WeChatDemoUITests.swift */; };
+		E49A9DB124D3FA4A0037E9D3 /* XCUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A9DAF24D3F8130037E9D3 /* XCUITest.swift */; };
 		E4C89E1224CE681B008DD101 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C89E1124CE681B008DD101 /* Model.swift */; };
 		E4C89E2D24CE90B9008DD101 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C89E2C24CE90B9008DD101 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		E422ABE024CA819A002E10EB /* WeChatDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeChatDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E422ABE424CA819A002E10EB /* WeChatDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatDemoUITests.swift; sourceTree = "<group>"; };
 		E422ABE624CA819A002E10EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49A9DAF24D3F8130037E9D3 /* XCUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITest.swift; sourceTree = "<group>"; };
 		E49C684B24D01B1800C6DCD6 /* WeChatDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeChatDemo.entitlements; sourceTree = "<group>"; };
 		E4C89E1124CE681B008DD101 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E4C89E2C24CE90B9008DD101 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		E422ABE324CA819A002E10EB /* WeChatDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E49A9DAF24D3F8130037E9D3 /* XCUITest.swift */,
 				E422ABE424CA819A002E10EB /* WeChatDemoUITests.swift */,
 				E422ABE624CA819A002E10EB /* Info.plist */,
 			);
@@ -439,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49A9DB124D3FA4A0037E9D3 /* XCUITest.swift in Sources */,
 				E422ABE524CA819A002E10EB /* WeChatDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
