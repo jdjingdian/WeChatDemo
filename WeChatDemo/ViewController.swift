@@ -11,7 +11,7 @@ import SnapKit
 class ViewController: UIViewController {
     
     var group = [
-        Type(typ: "Main", person: [Person(name: "123", avatar: "", opinion: "", photos: []),] ),
+        Type(typ: "Main", person: [] ),
         
         Type(typ: "Con", person: [
             Person(name: "Mac Catalyst", avatar: "catalyst", opinion: "Native Mac apps built with Mac Catalyst can share code with your iPad apps, and you can add more features just for Mac. In macOS Big Sur, you can create even more powerful versions of your apps and take advantage of every pixel on the screen by running them at native Mac resolution. Apps built with Mac Catalyst can now be fully controlled using just the keyboard, access more iOS frameworks, and take advantage of the all-new look of macOS Big Sur. There’s never been a better time to turn your iPad app into a powerful Mac app.", photos: []),
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             
             
             
-            ])]
+        ])]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -54,7 +54,12 @@ extension ViewController: UITableViewDelegate{
         return group.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return group[section].person.count
+        if(group[section].typ == "Main" ){
+            return 1
+            
+        }else{
+            return group[section].person.count
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("hello")
@@ -65,6 +70,7 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if(group[indexPath.section].typ == "Main"){
+            tableView.numberOfRows(inSection: 1)
             guard let cell1 = tableView.dequeueReusableCell(withIdentifier: FirstTableViewCell.identifier1, for: indexPath) as? FirstTableViewCell else{
                 return UITableViewCell()
             }

@@ -108,7 +108,7 @@ class MyTableViewCell: UITableViewCell {
             }
             
         }
-    }
+    }//将图片与文字信息传入
     
     private func setImage(count: Int, pName:[String]){
         //将图像循环放入imageContenView(UIView)中
