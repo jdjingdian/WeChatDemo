@@ -36,16 +36,16 @@ class MyTableViewCell: UITableViewCell {
     //清空复用Cell之前的属性
     
     override func prepareForReuse() {
-        super.prepareForReuse()
-        photo.image = nil
-        photo.snp.remakeConstraints{(make) in
-
-        }
-        imageContenView.snp.remakeConstraints{ _ in
-
-        }
-        
-        
+//        super.prepareForReuse()
+//        photo.image = nil
+//        photo.snp.remakeConstraints{(make) in
+//
+//        }
+//        imageContenView.snp.remakeConstraints{ _ in
+//
+//        }
+//        
+//        
     }
     
     

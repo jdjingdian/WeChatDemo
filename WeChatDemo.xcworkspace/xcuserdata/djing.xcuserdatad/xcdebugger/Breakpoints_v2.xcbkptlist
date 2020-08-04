@@ -14,10 +14,223 @@
             filePath = "WeChatDemo/MyTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "setContent(names:avatars:content:photosAmount:photosName:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D37EB094-C9C4-4A37-81E8-16D1FBCAC542"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeChatDemo/MyTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA84CE9B-409E-40D5-BC8D-51D1729880B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeChatDemo/MyTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6531D291-4573-4BB2-90C7-15EBE7E602A4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeChatDemo/MyTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168">
+            <Locations>
+               <Location
+                  uuid = "6531D291-4573-4BB2-90C7-15EBE7E602A4 - 1b185b6e90da2e08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeChatDemo.MyTableViewCell.(setImage in _C995BE990EB9E0788C765686AC40A914)(count: Swift.Int, pName: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "WeChatDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemo/MyTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "5196">
+               </Location>
+               <Location
+                  uuid = "6531D291-4573-4BB2-90C7-15EBE7E602A4 - b10d0f9195554a6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #7 (SnapKit.ConstraintMaker) -&gt; () in WeChatDemo.MyTableViewCell.(setImage in _C995BE990EB9E0788C765686AC40A914)(count: Swift.Int, pName: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "WeChatDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemo/MyTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3E1E6E6-F782-4D24-956E-0CDCC0501E5A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeChatDemoTests/WeChatDemoTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "testFirstTable()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EF938D5-3AC0-405E-B5E8-28C4B3D37265"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeChatDemoUITests/XCUITest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "UItest"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7EF938D5-3AC0-405E-B5E8-28C4B3D37265 - e30046e6eb26a58a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeChatDemoUITests.UItest.__deallocating_deinit"
+                  moduleName = "WeChatDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemoUITests/XCUITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "7EF938D5-3AC0-405E-B5E8-28C4B3D37265 - c83983b0cb6bf3af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeChatDemoUITests.UItest.__allocating_init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; WeChatDemoUITests.UItest"
+                  moduleName = "WeChatDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemoUITests/XCUITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "7EF938D5-3AC0-405E-B5E8-28C4B3D37265 - 53911ac41e944b00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeChatDemoUITests.UItest.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; WeChatDemoUITests.UItest"
+                  moduleName = "WeChatDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemoUITests/XCUITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  uuid = "7EF938D5-3AC0-405E-B5E8-28C4B3D37265 - 461a4d78e63a9ac8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeChatDemoUITests.UItest.__allocating_init(selector: ObjectiveC.Selector) -&gt; WeChatDemoUITests.UItest"
+                  moduleName = "WeChatDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemoUITests/XCUITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "7EF938D5-3AC0-405E-B5E8-28C4B3D37265 - bea3054c5297446b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeChatDemoUITests.UItest.init(selector: ObjectiveC.Selector) -&gt; WeChatDemoUITests.UItest"
+                  moduleName = "WeChatDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemoUITests/XCUITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  uuid = "7EF938D5-3AC0-405E-B5E8-28C4B3D37265 - 6829592ec6b4e50c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeChatDemoUITests.UItest.__allocating_init() -&gt; WeChatDemoUITests.UItest"
+                  moduleName = "WeChatDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemoUITests/XCUITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "7EF938D5-3AC0-405E-B5E8-28C4B3D37265 - c2b4743e31e4dd44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeChatDemoUITests.UItest.init() -&gt; WeChatDemoUITests.UItest"
+                  moduleName = "WeChatDemoUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djing/Documents/WeChatDemo/WeChatDemoUITests/XCUITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
